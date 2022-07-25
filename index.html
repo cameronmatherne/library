@@ -1,56 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML 5 Boilerplate</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
 
-    <div class="wrapper">
-      <h1> Library</h1>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HTML 5 Boilerplate</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
 
-      <div class="form-popup" id="myForm">
-        <form action="/action_page.php" class="form-container">
-          <h1>Add book</h1>
-          <label for="text"><b>Author</b></label>
-          <input type="text" placeholder="author" id="author" name="author" required>
-      
-          <label for="text"><b>Title</b></label>
-          <input type="text" placeholder="title" id="title"  name="title" required>
-          
-          <div class="bottomButtons">
-            <button type="button" class="btn">Add</button>
-            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-          </div>
-        </form>
-      </div>
+<body>
 
-      <div class="button-header" >
-        <button class="addBook" id="addBook" onclick="openForm()"> Add book </button>
-        <button class="removeBook"> Remove book</button>
-      </div> 
-      <div class="container">
-        <div class="card"></div>
-  
+  <div class="wrapper">
+    <h1> Library</h1>
+
+    <div class="form-popup" id="myForm">
+      <form action="/action_page.php" class="form-container">
+        <h1>Add book</h1>
+        <label for="text"><b>Author</b></label>
+        <input type="text" placeholder="author" id="author" name="author" required>
+
+        <label for="text"><b>Title</b></label>
+        <input type="text" placeholder="title" id="title" name="title" required>
+
+        <div class="bottomButtons">
+          <button type="button" class="btn">Add</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="button-header">
+      <button class="addBook" id="addBook" onclick="openForm()"> Add book </button>
+      <button class="removeBook"> Remove book</button>
+    </div>
+    <div class="container">
+      <div class="card"></div>
+
     </div>
   </div>
 
+</body>
+<script src="index.js" defer></script>
 
-
-
-
-
-
-
-
-
-
-
-
-  
-  </body>
-  <script src="index.js" defer></script>
 </html>
