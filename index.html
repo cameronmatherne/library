@@ -12,6 +12,30 @@
     <div class="wrapper">
       <h1> Cameron's library</h1>
 
+      <button class="open-button" onclick="openForm()">Open Form</button>
+
+      <div class="form-popup" id="myForm">
+        <form action="" class="form-container">
+          <h1>Add book</h1>
+      
+          <label for="text"><b>Author</b></label>
+          <input type="text" placeholder="author" name="author" required>
+      
+          <label for="text"><b>Title</b></label>
+          <input type="text" placeholder="bookTitle" name="bookTitle" required>
+          
+          <div class="bottomButtons">
+            <button type="submit" class="btn">Add book</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+          </div>
+        </form>
+      </div>
+
+
+
+
+
+
       <div class="button-header" >
         <button class="addBook" id="addBook"> Add book </button>
         <button class="removeBook"> Remove book</button>
