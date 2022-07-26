@@ -9,15 +9,13 @@ const container = document.querySelector('.container');
 const statusBtn = document.querySelector('.statusBtn');
 
 // book constructor 
+
 function Book(title, author, readStatus) {
     this.title = title;
     this.author = author;
     this.readStatus = readStatus;
 }
 
-Book.prototype.toggleStatus = function () {
-    return this.readStatus;
-}
 
 // take input from form and turn it into a Book object
 function createBook() {
@@ -26,11 +24,7 @@ function createBook() {
     const titleData = document.getElementById("title").value;
 
     // create book object
-    const bookEntry = Object.create(Book);
-    bookEntry.title = titleData;
-    bookEntry.author = authorData;
-    bookEntry.readStatus = false;
-    bookEntry.id = titleData;
+    const bookEntry = new Book(titleData, authorData, false);
 
     // take book object, add it to library array / put information on card 
     addBookToLibrary(bookEntry);
@@ -41,13 +35,13 @@ function createBook() {
     document.getElementById("title").value = "";
 }
 
+// takes a book object with data and adds it to a block on the grid 
 function addBookToLibrary(book) {
     library.push(book);
 
     // create a card that is visible on the grid 
     const card = document.createElement("div");
     card.className = "card";
-    card.id = book.title;
 
     // add the book title to the card
     const titleField = document.createElement("div");
@@ -59,17 +53,25 @@ function addBookToLibrary(book) {
 
     // add button to determine if book was read or not 
     const statusBtn = document.createElement("button");
-    statusBtn.innerText = "Not read";
-    statusBtn.className = "readStatusBtn";
-    console.log(book.toggleStatus);
+    statusBtn.id = book.title;
+    statusBtn.className = 'statusBtn';
+    statusBtn.innerHTML = "Not read";
+
+    // function that toggles whether a book has been read or not 
+    statusBtn.onclick = function () {
+        book.readStatus = !book.readStatus;
+        if (book.readStatus == true) {
+            statusBtn.innerText = 'Read'
+        } else {
+            statusBtn.innerText = 'Not read'
+        }
+    };
 
     // append the fields that show text (author and title) to the card 
     container.appendChild(card);
     card.appendChild(titleField);
     card.appendChild(authorField);
     card.appendChild(statusBtn);
-    
-    console.log(library);
 }
 
 function openForm() {

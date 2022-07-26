@@ -37,10 +37,6 @@
     gap: 24px;
 }
 
-
-
-.open-button {}
-
 /* The popup form - hidden by default */
 .form-popup {
     display: none;
@@ -63,9 +59,3 @@
 
 }
 
-
-/* Set a style for the submit/login button */
-.form-container .btn {}
-
-/* Add a red background color to the cancel button */
-.form-container .cancel {}
