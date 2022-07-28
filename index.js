@@ -62,8 +62,10 @@ function addBookToLibrary(book) {
         book.readStatus = !book.readStatus;
         if (book.readStatus == true) {
             statusBtn.innerText = 'Read'
+            card.style.backgroundColor = 'green';
         } else {
             statusBtn.innerText = 'Not read'
+            card.style.backgroundColor = 'red';
         }
     };
 
@@ -81,6 +83,11 @@ function openForm() {
 function closeForm() {
     document.getElementById("myForm").style.display = "none";
 }
+
+function removeBook() {
+
+}
+
 
 // button on form that sends data into a card and displays it 
 addBtn.addEventListener("click", createBook);

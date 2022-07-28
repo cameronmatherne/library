@@ -1,16 +1,73 @@
+html {
+    font-family: 'Prompt', sans-serif;
+}
+
+
 .header {
     text-align: center;
     font-size: 48px;
+    font-family: 'Prompt', sans-serif;
 
 }
 
-.master {
+
+body {
+    background-color: white;
     align-items: center;
 
+
+}
+
+.background * {
+    align-items: center;
+   
+
+}
+
+.button-header {
+    display: flex;
+    align-items: center; 
+    justify-content: space-evenly;
+    
+    
+    
+}
+
+.addBook {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.addBook:hover {
+    transform: scale(1.1);
+}
+
+.removeBtn {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.removeBtn:hover {
+    transform: scale(1.1);
+}
+
+.header {
+    background-color: white;
 }
 
 .container {
     display: grid;
+    margin-top: 48px;
     grid-template-columns: repeat(3, 150px);
     grid-template-rows: 150px 150px 150px;
     grid-auto-rows: 150px;
@@ -19,8 +76,9 @@
 }
 
 .card {
-    background-color: peachpuff;
+    background-color: white;
     border: 1px solid black;
+    box-shadow: 5px 5px 8px black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,7 +87,29 @@
     padding: 8px;
 }
 
-.wrapper {
+.addBook {
+  background-color: white; /* Green */
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.removeBtn {
+    background-color: white; /* Green */
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.background {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,10 +117,13 @@
     gap: 24px;
 }
 
+
 /* The popup form - hidden by default */
 .form-popup {
     display: none;
-    position: fixed;
+    align-items: center;
+    justify-content: center;
+    margin-top: 48px;
     background-color: white;
     border: 1px solid black;
 
